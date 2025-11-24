@@ -1,0 +1,4 @@
+zoom=   2.52
+width=  598
+height= 400
+hotkey= 0x5A
