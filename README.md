@@ -1,7 +1,7 @@
 # Magnification Overlay (Accessibility)
 
 ## How to Use:
-1. Download the executable
+1. Download the executable (Titled : **MGT_overlay.exe**)
 2. Run the executable.
 
 ## Notes:
