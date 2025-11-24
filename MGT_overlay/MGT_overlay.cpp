@@ -25,12 +25,12 @@
 #define MAX_LOADSTRING 100
 
 // Global Variables:
-HINSTANCE hInst;                                // main instance
+HINSTANCE hInst; // main instance
 HWND mainMenuHandle; // Specific parent window
 HWND pOverlayHandle;  // Specific parent Overlay window
 HWND cMagOverlayHandle; // Specific child Magnification window
-WCHAR szTitle[MAX_LOADSTRING];                  // The title bar text
-WCHAR szWindowClass[MAX_LOADSTRING];            // the main window class name
+WCHAR szTitle[MAX_LOADSTRING]; // The title bar text
+WCHAR szWindowClass[MAX_LOADSTRING]; // the main window class name
 LPCTSTR MAG_OVERLAY_CLASS_NAME{ L"MagOverlayWnd" };
 bool overlayStarted{ false };
 bool showOverlayControls = true;
@@ -38,7 +38,7 @@ bool shouldShutdownOverlay = false;
 bool overlayClassRegistered = false;
 // Refresh Rates
 UINT g_timerId = 0;
-constexpr UINT g_timerIntervalMs = 4; // ~240Hz 
+constexpr UINT g_timerIntervalMs = 4; // ~240Hz ------ CHANGE IF YOU HAVE A DIFFERENT REFRESH RATE
 
 // User Preference Global Variables
 HWND hSliderZoom;
@@ -379,7 +379,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     switch (message)
     {
     case WM_HOTKEY:
-        if (wParam == 1 && overlayStarted)        // only toggle if overlay is running
+        if (wParam == 1 && overlayStarted) // only toggle if overlay is running
         {
             overlayVisible = !overlayVisible;
 

@@ -520,7 +520,7 @@ bool    ImGui_ImplDX11_CreateDeviceObjects()
         pixelShaderBlob->Release();
     }
 
-    // Create the blending setup
+    // Create blending setup
     {
         D3D11_BLEND_DESC desc;
         ZeroMemory(&desc, sizeof(desc));

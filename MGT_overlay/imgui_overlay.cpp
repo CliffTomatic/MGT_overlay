@@ -28,8 +28,8 @@ ID3D11RenderTargetView* g_mainRenderTargetView = nullptr;
 
 // Initialize DirectX11 and the Dear ImGui
 void Init_ImGui_DirectX11(HWND hMenuInstance) {
-    CreateDeviceD3D(hMenuInstance); // <- creates device + context + swapchain
-    CreateRenderTarget();         // <- gets backbuffer from swapchain
+    CreateDeviceD3D(hMenuInstance); // creates device + context + swapchain
+    CreateRenderTarget(); // gets backbuffer from swapchain
 
     // Init ImGui Overlay
     ImGui::CreateContext();
@@ -103,7 +103,7 @@ void CleanupDeviceD3D() {
 
 void LoadOverlaySettings()
 {
-    width = 400;   // hard reset to defaults
+    width = 400; // hard reset to defaults
     height = 400;
     zoomFactor = 2.0f;
 
@@ -114,7 +114,7 @@ void LoadOverlaySettings()
     while (std::getline(file, line))
     {
         std::istringstream iss(line);
-        std::string key;            // holds the “label=” part
+        std::string key; // holds the “label=” part
         float  fval;
         int    ival;
 
@@ -146,6 +146,6 @@ void SaveOverlaySettings()
     file << "width=  " << width << '\n';
     file << "height= " << height << '\n';
 
-    file << std::hex << std::uppercase;            // write VK code in hex
+    file << std::hex << std::uppercase; // write VK code in hex
     file << "hotkey= 0x" << userHotkey << '\n';
 }
